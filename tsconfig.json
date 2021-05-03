@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "removeComments": false,
+    "inlineSourceMap": true,
+    "declaration": false,
+    "noImplicitAny": false,
+    "outDir": "JSFiles",
+    "esModuleInterop": true
+  },
+  // "files": ["specs/**/*"],
+  "exclude": ["node_modules"]
+}

@@ -1,16 +1,26 @@
 {
   "name": "labs",
   "version": "1.0.0",
-  "description": "To test protractor commands",
+  "description": "To test protractor with typescript",
   "main": "config.js",
   "scripts": {
-    "test": "protractor ./configuration.js"
+    "ts-build": "tsc",
+    "test": "protractor JSFiles/configuration.js"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "angular-protractor-labs"
+  ],
+  "author": "Srinivasan K K",
   "license": "ISC",
-  "devDependencies": {
+  "dependencies": {
+    "protractor": "^7.0.0",
     "jasmine": "^3.7.0",
-    "protractor": "^7.0.0"
+    "typescript": "^4.2.4"
+  },
+  "devDependencies": {
+    "@types/jasmine": "^3.6.10",
+    "@types/jasminewd2": "^2.0.8",
+    "@types/node": "^15.0.1",
+    "ts-node": "^9.1.1"
   }
 }
