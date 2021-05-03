@@ -4,8 +4,12 @@
   "description": "To test protractor with typescript",
   "main": "config.js",
   "scripts": {
-    "ts-build": "tsc",
-    "test": "protractor JSFiles/configuration.js"
+    "ts-build": "node_modules/.bin/tsc",
+    "wdm-start": "node ./node_modules/protractor/node_modules/.bin/webdriver-manager start",
+    "wdm-update": "node ./node_modules/protractor/node_modules/.bin/webdriver-manager update",
+    "run-wdm": "npm run wdm-update & npm run wdm-start",
+    "pretest": "npm run ts-build",
+    "test": "node_modules/.bin/protractor JSFiles/configuration.js"
   },
   "keywords": [
     "angular-protractor-labs"
