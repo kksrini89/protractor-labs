@@ -1,25 +1,27 @@
 {
   "name": "labs",
   "version": "1.0.0",
-  "description": "To test protractor with typescript",
-  "main": "config.js",
+  "description": "To automate tests with protractor and typescript",
   "scripts": {
-    "ts-build": "node_modules/.bin/tsc",
-    "wdm-start": "node ./node_modules/protractor/node_modules/.bin/webdriver-manager start",
-    "wdm-update": "node ./node_modules/protractor/node_modules/.bin/webdriver-manager update",
-    "run-wdm": "npm run wdm-update & npm run wdm-start",
+    "wdm-start": "node_modules/.bin/webdriver-manager start",
+    "wdm-update": "node_modules/.bin/webdriver-manager update",
+    "run-wdm": "#:👑 start this script first npm run wdm-update && npm run wdm-start",
+    "ts-build": "./node_modules/.bin/tsc",
     "pretest": "npm run ts-build",
-    "test": "node_modules/.bin/protractor JSFiles/configuration.js"
+    "test": "protractor JSFiles/configuration.js"
   },
   "keywords": [
-    "angular-protractor-labs"
+    "angular-protractor-labs",
+    "protractor-cucumber-automation"
   ],
   "author": "Srinivasan K K",
   "license": "ISC",
   "dependencies": {
     "protractor": "^7.0.0",
     "jasmine": "^3.7.0",
-    "typescript": "^4.2.4"
+    "typescript": "^4.2.4",
+    "protractor-cucumber-framework": "8.0.4",
+    "@cucumber/cucumber": "^7.2.1"
   },
   "devDependencies": {
     "@types/jasmine": "^3.6.10",

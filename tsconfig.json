@@ -8,7 +8,8 @@
     "declaration": false,
     "noImplicitAny": false,
     "outDir": "JSFiles",
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "skipLibCheck": true
   },
   // "files": ["specs/**/*"],
   "exclude": ["node_modules"]

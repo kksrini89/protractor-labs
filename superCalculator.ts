@@ -1,11 +1,6 @@
 import { browser, by, element } from 'protractor';
 import { Calculator } from './pageObjects/Calculator';
 
-// TWO Important things implemented here
-// --------------------------------------
-// 1. Due to webdriver js control flow pattern deprecation: Use async/await or Promise chaining.
-// 2. Page Object mechanism (deriving Class Objects which includes properties as an element finder type)
-
 describe('Super Calculator Test Spec', () => {
   // browser.driver.manage().window().maximize();
   it('simple math equation', () => {
@@ -24,5 +19,12 @@ describe('Super Calculator Test Spec', () => {
       console.log(text);
       expect(text).toEqual('15');
     });
+  });
+
+  it('open angular website', async () => {
+    await browser.get('https://angularjs.org/');
+    await element(by.linkText('angular.io')).click();
+    await browser.sleep(3000);
+    await element(by.css("input[type='search']")).sendKeys('hello');
   });
 });
