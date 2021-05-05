@@ -1,5 +1,6 @@
 Feature: Angular Official Website Functionality
 
+@ngOfficial
 Scenario: Open and Search Angular official website
 
 Given I will navigate to AngularJs site

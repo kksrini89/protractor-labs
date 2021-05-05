@@ -5,14 +5,16 @@
   "scripts": {
     "wdm-start": "node_modules/.bin/webdriver-manager start",
     "wdm-update": "node_modules/.bin/webdriver-manager update",
-    "run-wdm": "#:👑 start this script first npm run wdm-update && npm run wdm-start",
+    "run-wdm": "npm run wdm-update && npm run wdm-start",
+    "run-del": "shx rm -rf JSFiles",
     "ts-build": "./node_modules/.bin/tsc",
-    "pretest": "npm run ts-build",
+    "pretest": "npm run run-del && npm run ts-build",
     "test": "protractor JSFiles/configuration.js"
   },
   "keywords": [
     "angular-protractor-labs",
-    "protractor-cucumber-automation"
+    "protractor-cucumber-automation",
+    "protractor-cucumber-reporter"
   ],
   "author": "Srinivasan K K",
   "license": "ISC",
@@ -29,6 +31,8 @@
     "@types/node": "^15.0.1",
     "chai": "^4.3.4",
     "chai-as-promised": "^7.1.1",
+    "cucumber-html-reporter": "^5.4.0",
+    "shx": "^0.3.3",
     "ts-node": "^9.1.1"
   }
 }
