@@ -1,5 +1,7 @@
 import { Given, Then, When } from '@cucumber/cucumber';
 import { browser } from 'protractor';
+import chai from 'chai';
+const expect = chai.expect;
 import { Calculator } from '../pageObjects/Calculator';
 
 const calculator = new Calculator();
@@ -18,4 +20,5 @@ Then('The displayed output should be {string}', async (string) => {
   await calculator.goButton.click();
   const text = await calculator.result.getText();
   console.log(text);
+  expect(text).to.equal(string);
 });
